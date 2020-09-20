@@ -26,22 +26,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const clothes = [
-    {
-      value: 1,
-      label: 'T-Shirts',
-    },
-    {
-      value: 2,
-      label: 'Shirts',
-    },
-    {
-      value: 3,
-      label: 'Shorts',
-    },
-    {
-      value: 4,
-      label: 'Bermudas ',
-    },
+  {
+    "_id": 1,
+    "name": "Shirts"
+},
+{
+    "_id": 2,
+    "name": "T-shirts"
+},
+{
+    "_id": 3,
+    "name": "Shorts"
+},
+{
+    "_id": 4,
+    "name": "Bermudas"
+},
+{
+    "_id": 5,
+    "name": "Joggers"
+},
+{
+    "_id": 6,
+    "name": "Shoes"
+}
   ];
 
 
@@ -79,6 +87,14 @@ function UploadProductPage(props) {
 
     const onSubmit = (event) =>{
       event.preventDefault();
+
+      
+      if (!titleValue || !descriptionValue || !priceValue ||
+        !cloth || !Images) {
+        return alert('fill all the fields first!')
+    }
+
+
       const variables ={
         writer: props.user.userData._id,
         title:titleValue,
