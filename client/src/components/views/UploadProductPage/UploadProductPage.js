@@ -168,8 +168,8 @@ function UploadProductPage(props) {
                 variant="outlined"
                 >
                 {clothes.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                {option.label}
+                <MenuItem key={option._id} value={option._id}>
+                {option.name}
                 </MenuItem>
           ))}
         </TextField>

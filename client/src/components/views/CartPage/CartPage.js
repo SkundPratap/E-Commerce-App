@@ -5,10 +5,10 @@ import {
     removeCartItem,
     onSuccessBuy
 } from '../../../_actions/user_actions';
-// import UserCardBlock from './Sections/UserCardBlock';
+ import UserCardBlock from './Sections/UserCardBlock';
 import { Result, Empty } from 'antd';
 import Axios from 'axios';
-// import Paypal from '../../utils/Paypal';
+import Paypal from '../../utils/Paypal';
 function CartPage(props) {
     const dispatch = useDispatch();
     const [Total, setTotal] = useState(0)
@@ -85,10 +85,10 @@ function CartPage(props) {
             <h1>My Cart</h1>
             <div>
 
-                {/* <UserCardBlock
+                <UserCardBlock
                     products={props.user.cartDetail}
                     removeItem={removeFromCart}
-                /> */}
+                />
 
 
                 {ShowTotal ?
@@ -117,7 +117,7 @@ function CartPage(props) {
 
             {/* Paypal Button */}
 
-            {/* {ShowTotal &&
+             {ShowTotal &&
 
                 <Paypal
                     toPay={Total}
@@ -126,7 +126,7 @@ function CartPage(props) {
                     transactionCanceled={transactionCanceled}
                 />
 
-            } */}
+            } 
 
 
 
