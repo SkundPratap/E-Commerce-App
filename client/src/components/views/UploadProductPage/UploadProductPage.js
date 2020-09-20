@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
 const clothes = [
   {
     "_id": 1,
-    "name": "Shirts"
+    "name": "T-Shirts"
 },
 {
     "_id": 2,
-    "name": "T-shirts"
+    "name": "Shirts"
 },
 {
     "_id": 3,
